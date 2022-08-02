@@ -15,7 +15,7 @@ public class StringincrementerController : ControllerBase
         _logger = logger;
         _stringcrementerService = stringincrementerService;
     }
-    [HttpGet]
+    [HttpGet("{inputString}")]
     public IActionResult Stringincrementer(string inputString)
     {
         string response = _stringcrementerService.CalculateIncreaseFromString(inputString);
